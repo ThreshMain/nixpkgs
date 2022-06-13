@@ -28,7 +28,7 @@ stdenv.mkDerivation rec {
 
   configureFlags = [
     (lib.withFeature (!enableStatic) "shared")
-    "--without-debug"
+    "--disable-leaks"
     "--enable-pc-files"
     "--enable-symlinks"
     "--with-manpage-format=normal"
