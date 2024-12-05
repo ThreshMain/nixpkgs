@@ -131,7 +131,7 @@ in
           options = {
 
             output.elasticsearch.hosts = mkOption {
-              type = with types; listOf str;
+              type = with types; nullOr (listOf str);
               default = [ "127.0.0.1:9200" ];
               example = [ "myEShost:9200" ];
               description = ''
